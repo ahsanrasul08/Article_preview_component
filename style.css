@@ -1,0 +1,253 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --light-royal-blue: hsl(220, 5%, 23%);
+  --desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --grayish-Blue: hsl(212, 23%, 69%);
+  --light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+h1,
+h2,
+h3 {
+  color: var(--very-dark-grayish-blue);
+}
+
+p {
+  color: var(--desaturated-Dark-Blue);
+}
+
+html {
+  font-size: 13px;
+
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: inline-block;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
+  margin: 20px;
+  position: relative;
+  margin-bottom: 50px;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.card__component {
+  display: grid;
+  max-width: 375px;
+  border-radius: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+}
+
+.card__description {
+  padding-inline: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.card__description h2 {
+  margin-bottom: 1.5rem;
+  font-size: 13px;
+
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  padding-inline: 2.5rem;
+
+}
+
+.card__profile__attributes {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex: 1 0 75%;
+
+
+}
+
+.card__profile__details__name {
+  font-size: 13px;
+}
+
+.card__profile__image {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.card__profile__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.card__profile__shareIcon__btn {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--light-Grayish-Blue);
+  border: none;
+  z-index: 5;
+  left: 90%;
+}
+
+.card__profile__shareIcon__btn:hover {
+  background-color: var(--grayish-Blue);
+  cursor: pointer;
+  
+}
+
+.card__profile__shareIcon__btn:active {
+  background-color: var(--light-Grayish-Blue);
+  cursor: pointer;
+}
+
+.card__profile__shareIcon__tray {
+  justify-content:left;
+  align-items: center;
+  flex: 1 0 65%;
+  margin-right: 20px;
+  background-color: var(--desaturated-Dark-Blue);
+  position: absolute;
+  width: 100%;
+
+  left: 0;
+  padding-inline: 2.5rem;
+  padding-block: 0;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  display: none;
+  
+}
+
+.card__profile__shareIcon__tray>* {
+margin-right: 10%;
+}
+
+
+.share__icon_fb svg path:hover,
+.share__icon_tw svg path:hover,
+.share__icon_pt svg path:hover
+{
+  fill:var(--grayish-Blue);
+  opacity: 0.8;
+  cursor: pointer;
+
+}
+
+.share__icon_fb svg path:active,
+.share__icon_tw svg path:active,
+.share__icon_pt svg path:active
+{
+  fill:var(--light-royal-blue);
+  cursor: pointer;
+
+}
+
+.shareIcon__tray__text {
+  color: var(--grayish-Blue);
+}
+
+.hide_share_icon_tray{
+  display: flex;
+}
+
+
+@media (min-width:760px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .card__component {
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    max-width: 650px;
+  }
+
+  .card__image img {
+   
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+  }  
+.card__profile__attributes{
+
+}
+.card__profile__shareIcon__tray {
+
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 65%;
+  background-color: var(--very-dark-grayish-blue);
+  position: absolute;
+  top:-2rem;
+  left:20rem;
+  width: 50%;
+ 
+  padding-inline: 1.5rem;
+  padding-block:0;
+  height: 50%;
+  border-radius: 10px;
+ }
+.card__profile__shareIcon__tray>* {
+  margin-right: 0;
+}
+}
