@@ -34,7 +34,7 @@ html {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 98vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,8 +206,6 @@ margin-right: 10%;
 
 @media (min-width:760px) {
   .container {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
