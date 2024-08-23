@@ -83,8 +83,8 @@ html {
 
 .card__description h2 {
   margin-bottom: 1.5rem;
-  font-size: 13px;
-
+  font-weight: 700;
+  
 }
 
 .card__footer {
@@ -111,6 +111,7 @@ html {
 
 .card__profile__details__name {
   font-size: 13px;
+  font-weight: 500;
 }
 
 .card__profile__image {
